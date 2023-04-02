@@ -1,0 +1,27 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{%static 'css/signin.css'%}">
+    <title>Signin</title>
+</head>
+<body>
+    
+    <form action="{%url 'signin'%}" method="POST">
+        {%csrf_token%}
+        <p>SignIn</p><br>
+        
+        <input type="text" id="username" name="username" placeholder="Enter Your Username" required>
+
+        
+        <input type="password" id="pass1" name="pass1" placeholder="Enter your Password" required>
+
+        <button type="submit">Sign In</button><br><br><br>
+        <h4>New?</h4>
+        <a href="{%url 'signup'%}">Signup Here</a>
+    </form>
+</body>
+</html>
